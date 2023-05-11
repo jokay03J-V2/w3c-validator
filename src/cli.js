@@ -1,6 +1,5 @@
 import { program } from "commander";
 import { checkDirectoryCli } from "./cli/checkDirectory.js";
-export * from "./api/checkDirectory.js";
 
 program
   .command("check <directory>")

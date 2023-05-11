@@ -2,7 +2,8 @@
   "name": "@jokay03j-v2/w3c-validator",
   "description": "cli to check index file to W3C Markup Service",
   "version": "0.0.1",
-  "main": "./src/cli.js",
+  "main": "./src/api.js",
+  "bin": "./src/cli.js",
   "type": "module",
   "repository": {
     "type": "git",
