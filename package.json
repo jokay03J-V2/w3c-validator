@@ -1,6 +1,5 @@
 {
   "name": "@jokay03j-v2/w3c-validator",
-  "private": "false",
   "description": "cli to check index file to W3C Markup Service",
   "version": "0.0.1",
   "main": "./src/cli.js",
