@@ -16,6 +16,9 @@
     "validator",
     "cli"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "jokay03J",
   "license": "MIT",
   "bugs": {
