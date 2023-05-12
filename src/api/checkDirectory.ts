@@ -1,15 +1,17 @@
 import * as fs from "fs";
 import axios from "axios";
 
+interface responseMessage {
+  type: string;
+  subType?: string;
+  message: string;
+}
+
 /**
  * get w3c validator response with file directory
- * @param {string} directory directory
- * @param {*} options
  * @since 0.0.1
- * @supportedFiles html
- * @returns {object[]}
  */
-export async function checkDirectory(directory, options) {
+export async function checkDirectory(directory: string) {
   if (!fs.existsSync(directory)) {
     throw new Error("Directory no exist");
   }
@@ -25,6 +27,6 @@ export async function checkDirectory(directory, options) {
       charset: "utf-8",
     },
   });
-  const messages = res.data.messages;
+  const messages: responseMessage[] = res.data.messages;
   return messages;
 }
