@@ -2,16 +2,19 @@
   "name": "@jokay03j-v2/w3c-validator",
   "description": "cli to check index file to W3C Markup Service",
   "version": "0.0.2",
-  "main": "./src/api.js",
-  "bin": "./src/cli.js",
   "type": "module",
+  "main": "./dist/api.js",
+  "bin": {
+    "w3c-validator": "./dist/index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jokay03J-V2/w3c-validator.git"
   },
-  "files": [
-    "src"
-  ],
+  "scripts": {
+    "build": "tsup",
+    "build:watch": "tsup --watch"
+  },
   "keywords": [
     "w3c",
     "validator",
@@ -30,5 +33,10 @@
     "axios": "^1.4.0",
     "chalk": "^5.2.0",
     "commander": "^10.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.1.3",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4"
   }
 }
