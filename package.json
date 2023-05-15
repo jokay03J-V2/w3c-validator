@@ -1,7 +1,7 @@
 {
   "name": "@jokay03j-v2/w3c-validator",
   "description": "cli to check index file to W3C Markup Service",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "main": "./dist/api.js",
   "types": "./dist/api.d.ts",
