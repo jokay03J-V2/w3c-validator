@@ -1,1 +1,5 @@
 .gitignore
+src
+tsconfig.json
+tsup.config.ts
+.github
