@@ -36,13 +36,17 @@ export async function checkDirectoryCli(
     }
 
     console.log(chalk.gray(`Found ${errors.length} error !`));
-  } catch (error) {
+  } catch (error: any) {
     switch (error.message) {
       case "Directory no exist":
-        program.error("path not valid");
+        program.error(chalk.red("Path not valid."));
         break;
       case "Is directory not file":
-        program.error("is a directory");
+        program.error(chalk.red("is a directory"));
+        break;
+
+      default:
+        program.error(chalk.red(error.message));
         break;
     }
   }
