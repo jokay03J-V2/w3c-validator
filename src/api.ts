@@ -1,1 +1,3 @@
-export * from "./api/checkDirectory.js";
+export * from "./api/checkDirectory";
+export * from "./api/checkUrl";
+export * from "./api/checkContent";

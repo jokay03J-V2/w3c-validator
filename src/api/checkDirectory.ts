@@ -5,6 +5,12 @@ interface responseMessage {
   type: string;
   subType?: string;
   message: string;
+  lastLine: number;
+  lastColumn: number;
+  firstColumn: number;
+  extract: string;
+  hiliteStart: number;
+  hiliteLenght: number;
 }
 
 /**
@@ -18,6 +24,10 @@ export async function checkDirectory(directory: string) {
 
   if (fs.lstatSync(directory).isDirectory()) {
     throw new Error("Is directory not file");
+  }
+
+  if (!directory.endsWith(".html")) {
+    throw new Error("Invalid Html file");
   }
 
   const file = fs.readFileSync(directory);
