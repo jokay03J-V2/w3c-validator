@@ -1,42 +1,84 @@
 {
   "name": "@jokay03j-v2/w3c-validator",
-  "description": "cli to check index file to W3C Markup Service",
-  "version": "1.0.0",
-  "type": "module",
-  "main": "./dist/api.js",
+  "version": "0.0.0",
+  "description": "wrapper and CLI for check file or url with W3C Markup Service",
+  "author": "jokay03J-V2",
   "bin": {
-    "w3c-validator": "./dist/index.js"
+    "w3c-validator": "./bin/run"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jokay03J-V2/w3c-validator.git"
-  },
-  "scripts": {
-    "build": "tsup",
-    "build:watch": "tsup --watch"
-  },
-  "keywords": [
-    "w3c",
-    "validator",
-    "cli"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "author": "jokay03J",
+  "homepage": "https://github.com/jokay03J-V2/w3c-validator",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jokay03J-V2/w3c-validator/issues"
-  },
-  "homepage": "https://github.com/jokay03J-V2/w3c-validator#readme",
+  "main": "dist/index.js",
+  "repository": "jokay03J-V2/w3c-validator",
+  "files": [
+    "/bin",
+    "/dist",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
   "dependencies": {
+    "@oclif/core": "^2",
+    "@oclif/plugin-autocomplete": "^2.2.0",
+    "@oclif/plugin-help": "^5",
+    "@oclif/plugin-not-found": "^2.3.24",
+    "@oclif/plugin-plugins": "^2.4.7",
     "axios": "^1.4.0",
-    "chalk": "^5.2.0",
-    "commander": "^10.0.1"
+    "chalk": "^4.1.2",
+    "puppeteer": "^20.4.0"
   },
   "devDependencies": {
-    "@types/node": "^20.1.3",
-    "tsup": "^6.7.0",
-    "typescript": "^5.0.4"
-  }
+    "@oclif/test": "^2.3.21",
+    "@types/chai": "^4",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.18.34",
+    "chai": "^4",
+    "eslint": "^7.32.0",
+    "eslint-config-oclif": "^4",
+    "eslint-config-oclif-typescript": "^1.0.3",
+    "mocha": "^9",
+    "oclif": "^3",
+    "shx": "^0.3.3",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.5.2",
+    "typescript": "^4.9.5"
+  },
+  "oclif": {
+    "bin": "w3c-validator",
+    "dirname": "w3c-validator",
+    "commands": "./dist/commands",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-plugins",
+      "@oclif/plugin-not-found",
+      "@oclif/plugin-autocomplete",
+      "@oclif/plugin-warn-if-update-available"
+    ],
+    "topicSeparator": " ",
+    "topics": {},
+    "warn-if-update-available": {
+      "timeoutInDays": 1,
+      "message": "<%= config.name %> update available from <%= chalk.greenBright(config.version) %> to <%= chalk.greenBright(latest) %>.",
+      "authorization": "Basic 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"
+    }
+  },
+  "scripts": {
+    "build": "shx rm -rf dist && tsc -b",
+    "release": "npm run build && oclif manifest",
+    "lint": "eslint . --ext .ts --config .eslintrc",
+    "postpack": "shx rm -f oclif.manifest.json",
+    "posttest": "npm run lint",
+    "prepack": "npm run build && oclif manifest && oclif readme",
+    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif readme && git add README.md"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "bugs": "https://github.com/jokay03J-V2/w3c-validator/issues",
+  "keywords": [
+    "cli",
+    "w3c",
+    "validator"
+  ],
+  "types": "dist/index.d.ts"
 }
