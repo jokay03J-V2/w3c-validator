@@ -1,16 +1,5 @@
 import axios from "axios";
-
-interface responseMessage {
-  type: string;
-  subType?: string;
-  message: string;
-  lastLine: number;
-  lastColumn: number;
-  firstColumn: number;
-  extract: string;
-  hiliteStart: number;
-  hiliteLenght: number;
-}
+import { responseMessage } from "../utils/types";
 
 /**
  * Submit html to w3c.

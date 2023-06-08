@@ -1,17 +1,6 @@
 import * as fs from "node:fs";
 import axios from "axios";
-
-interface responseMessage {
-  type: string;
-  subType?: string;
-  message: string;
-  lastLine: number;
-  lastColumn: number;
-  firstColumn: number;
-  extract: string;
-  hiliteStart: number;
-  hiliteLenght: number;
-}
+import { responseMessage } from "../utils/types";
 
 /**
  * get w3c validator response with file directory
