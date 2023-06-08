@@ -19,7 +19,7 @@
   "dependencies": {
     "@jokay03j-v2/w3c-validator": "^2.1.1",
     "@oclif/core": "^2",
-    "@oclif/plugin-autocomplete": "^2.2.0",
+    "@oclif/plugin-autocomplete": "^2.3.0",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-not-found": "^2.3.24",
     "@oclif/plugin-plugins": "^2.4.7",
