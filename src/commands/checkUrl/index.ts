@@ -1,5 +1,4 @@
 import { Command, Args, Flags, ux } from "@oclif/core";
-import { checkFile } from "../../core/checkFile";
 import { red, redBright, blue, gray } from "chalk";
 import { checkUrl } from "../../core/checkUrl";
 import { checkContent } from "../../core/checkContent";
@@ -16,7 +15,7 @@ export class CheckUrl extends Command {
 
   static description = "check url on W3C Validator";
 
-  async run() {
+  async run(): Promise<void> {
     const { args, flags } = await this.parse(CheckUrl);
     try {
       ux.action.start("fetching url");
@@ -26,8 +25,7 @@ export class CheckUrl extends Command {
       const messages = await checkContent(content);
       ux.action.stop();
 
-      for (let index = 0; index < messages.length; index++) {
-        const message = messages[index];
+      for (const message of messages) {
         switch (message.type) {
           case "error":
             ux.log(red(message.type), message.message);

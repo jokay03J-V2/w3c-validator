@@ -15,15 +15,15 @@ export class Check extends Command {
 
   static description = "check file on W3C Validator";
 
-  async run() {
+  async run(): Promise<void> {
     const { args, flags } = await this.parse(Check);
     try {
+      if (args.file.endsWith(".html")) this.error("You must point html file !");
       ux.action.start("fetching file");
       const messages = await checkFile(args.file);
       ux.action.stop();
 
-      for (let index = 0; index < messages.length; index++) {
-        const message = messages[index];
+      for (const message of messages) {
         switch (message.type) {
           case "error":
             ux.log(red(message.type), message.message);
