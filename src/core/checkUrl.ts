@@ -5,15 +5,11 @@ import puppeteer from "puppeteer";
  * @since 1.0.1
  */
 export async function checkUrl(url: string): Promise<string> {
-  try {
-    const browser = await puppeteer.launch({ headless: "new" });
-    const page = await browser.newPage();
+  const browser = await puppeteer.launch({ headless: "new" });
+  const page = await browser.newPage();
 
-    await page.goto(`${url}`);
-    const data = await page.content();
-    await browser.close();
-    return data;
-  } catch (error) {
-    throw error;
-  }
+  await page.goto(`${url}`);
+  const data = await page.content();
+  await browser.close();
+  return data;
 }

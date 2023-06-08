@@ -16,7 +16,9 @@ interface responseMessage {
  * Submit html to w3c.
  * @since 1.1.0
  */
-export async function checkContent(content: string) {
+export async function checkContent(
+  content: string
+): Promise<responseMessage[]> {
   const res = await axios.post(
     "https://validator.w3.org/nu/?out=json",
     content,

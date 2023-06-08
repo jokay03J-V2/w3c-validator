@@ -1,4 +1,4 @@
-import * as fs from "fs";
+import * as fs from "node:fs";
 import axios from "axios";
 
 interface responseMessage {
@@ -17,7 +17,7 @@ interface responseMessage {
  * get w3c validator response with file directory
  * @since 0.0.1
  */
-export async function checkFile(directory: string) {
+export async function checkFile(directory: string): Promise<responseMessage[]> {
   if (!fs.existsSync(directory)) {
     throw new Error("Directory no exist");
   }
