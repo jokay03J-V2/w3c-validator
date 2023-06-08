@@ -14,6 +14,20 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
+      - name: Cache node modules
+        id: cache-npm
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          # npm cache files are stored in `~/.npm` on Linux/macOS
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
@@ -29,7 +43,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: production-files
-          path: ./dist
+          path: ./build
 
   deploy:
     name: Deploy
@@ -42,10 +56,10 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: production-files
-          path: ./dist
+          path: ./build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./build
