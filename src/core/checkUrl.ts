@@ -1,10 +1,10 @@
 import puppeteer from "puppeteer";
 
 /**
- * submit html file from url
+ * return html content from a url
  * @since 1.0.1
  */
-export async function checkUrl(url: string) {
+export async function checkUrl(url: string): Promise<string> {
   try {
     const browser = await puppeteer.launch({ headless: "new" });
     const page = await browser.newPage();
@@ -14,6 +14,6 @@ export async function checkUrl(url: string) {
     await browser.close();
     return data;
   } catch (error) {
-    return error;
+    throw error;
   }
 }

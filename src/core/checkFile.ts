@@ -17,7 +17,7 @@ interface responseMessage {
  * get w3c validator response with file directory
  * @since 0.0.1
  */
-export async function checkDirectory(directory: string) {
+export async function checkFile(directory: string) {
   if (!fs.existsSync(directory)) {
     throw new Error("Directory no exist");
   }
