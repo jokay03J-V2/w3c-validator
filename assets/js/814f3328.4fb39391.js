@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkw_3_c_validator=self.webpackChunkw_3_c_validator||[]).push([[2535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"First release","permalink":"/w3c-validator/blog/first-release"}]}')}}]);
