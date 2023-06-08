@@ -17,12 +17,12 @@
     "/oclif.manifest.json"
   ],
   "dependencies": {
+    "@jokay03j-v2/w3c-validator": "^2.1.1",
     "@oclif/core": "^2",
     "@oclif/plugin-autocomplete": "^2.2.0",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-not-found": "^2.3.24",
     "@oclif/plugin-plugins": "^2.4.7",
-    "@oclif/plugin-warn-if-update-available": "^2.0.37",
     "axios": "^1.4.0",
     "chalk": "^4.1.2",
     "puppeteer": "^20.4.0"
@@ -59,16 +59,10 @@
       "@oclif/plugin-help",
       "@oclif/plugin-plugins",
       "@oclif/plugin-not-found",
-      "@oclif/plugin-autocomplete",
-      "@oclif/plugin-warn-if-update-available"
+      "@oclif/plugin-autocomplete"
     ],
     "topicSeparator": " ",
-    "topics": {},
-    "warn-if-update-available": {
-      "timeoutInDays": 1,
-      "message": "<%= config.name %> update available from <%= chalk.greenBright(config.version) %> to <%= chalk.greenBright(latest) %>.",
-      "authorization": "Basic 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"
-    }
+    "topics": {}
   },
   "scripts": {
     "build": "shx rm -rf dist && tsc -b",
