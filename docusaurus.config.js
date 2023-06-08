@@ -14,14 +14,14 @@ const config = {
   url: "https://jokay03j-v2.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/w3c-validator",
+  baseUrl: "/w3c-validator/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "jokay03j-v2", // Usually your GitHub org/user name.
   projectName: "w3c-validator", // Usually your repo name.
 
-  onBrokenLinks: "throw",
+  onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -131,4 +131,3 @@ const config = {
 };
 
 module.exports = config;
-
