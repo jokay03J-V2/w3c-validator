@@ -4,13 +4,7 @@ sidebar_position: 1
 
 # check
 
-return W3C Validation Markup Service response from a valid directory.
-
-:::warning
-
-the directory must be point to html file
-
-:::
+return W3C Validation Markup Service response from a html file.
 
 ```ts
 interface responseMessage {
@@ -25,5 +19,5 @@ interface responseMessage {
   hiliteLenght: number;
 }
 
-checkDirectory(directory: string): Promise<responseMessage[]>
+checkDirectory(pathToFile: string): Promise<responseMessage[]>
 ```

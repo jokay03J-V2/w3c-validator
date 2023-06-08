@@ -4,15 +4,9 @@ sidebar_position: 1
 
 # check
 
-check html file from a directory.
+check html file.
 
 ## usage
-
-:::note
-
-the directory must be point to html file
-
-:::
 
 ```bash
 w3c-validator check <directory> [-t || --throwError]
