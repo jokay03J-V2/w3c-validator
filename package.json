@@ -25,7 +25,7 @@
     "@oclif/plugin-plugins": "^2.4.7",
     "axios": "^1.4.0",
     "chalk": "^4.1.2",
-    "puppeteer": "^20.4.0"
+    "puppeteer": "^20.5.0"
   },
   "devDependencies": {
     "@oclif/test": "^2.3.22",
