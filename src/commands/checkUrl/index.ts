@@ -2,6 +2,7 @@ import { Command, Args, Flags, ux } from "@oclif/core";
 import { red, redBright, blue, gray } from "chalk";
 import { checkUrl } from "../../core/checkUrl";
 import { checkContent } from "../../core/checkContent";
+import { _displayMessage } from "../../utils/displayMessage";
 
 export class CheckUrl extends Command {
   static args = {
@@ -25,17 +26,7 @@ export class CheckUrl extends Command {
       const messages = await checkContent(content);
       ux.action.stop();
 
-      for (const message of messages) {
-        switch (message.type) {
-          case "error":
-            ux.log(red(message.type), message.message);
-            break;
-
-          case "info":
-            ux.log(blue(message.type), message.message);
-            break;
-        }
-      }
+      _displayMessage(messages);
 
       const errors = messages.filter((message) => message.type === "error");
       if (flags.throwError && errors.length > 0) {
@@ -46,7 +37,9 @@ export class CheckUrl extends Command {
         );
       }
 
-      ux.log(gray(`Found ${errors.length} error !`));
+      ux.log(
+        gray(`Found ${errors.length} error${errors.length > 1 ? "s" : ""} !`)
+      );
     } catch (error: any) {
       this.error(red(error.message));
     }
