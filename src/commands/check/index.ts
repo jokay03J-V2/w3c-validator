@@ -18,7 +18,8 @@ export class Check extends Command {
   async run(): Promise<void> {
     const { args, flags } = await this.parse(Check);
     try {
-      if (args.file.endsWith(".html")) this.error("You must point html file !");
+      if (!args.file.endsWith(".html"))
+        this.error("You must point html file !");
       ux.action.start("fetching file");
       const messages = await checkFile(args.file);
       ux.action.stop();
