@@ -1,6 +1,7 @@
 import { Command, Args, Flags, ux } from "@oclif/core";
 import { checkFile } from "../../core/checkFile";
 import { red, redBright, blue, gray } from "chalk";
+import { _displayMessage } from "../../utils/displayMessage";
 
 export class Check extends Command {
   static args = {
@@ -24,17 +25,7 @@ export class Check extends Command {
       const messages = await checkFile(args.file);
       ux.action.stop();
 
-      for (const message of messages) {
-        switch (message.type) {
-          case "error":
-            ux.log(red(message.type), message.message);
-            break;
-
-          case "info":
-            ux.log(blue(message.type), message.message);
-            break;
-        }
-      }
+      _displayMessage(messages);
 
       const errors = messages.filter((message) => message.type === "error");
       if (flags.throwError && errors.length > 0) {
