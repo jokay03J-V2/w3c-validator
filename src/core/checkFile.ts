@@ -1,6 +1,6 @@
 import * as fs from "node:fs";
 import axios from "axios";
-import { responseMessage } from "../utils/types";
+import { type responseMessage } from "../utils/types";
 
 /**
  * get w3c validator response with file directory

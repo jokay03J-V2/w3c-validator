@@ -1,6 +1,6 @@
 import { Command, Args, Flags, ux } from "@oclif/core";
 import { checkFile } from "../../core/checkFile";
-import { red, redBright, blue, gray } from "chalk";
+import { red, redBright, gray } from "chalk";
 import { _displayMessage } from "../../utils/displayMessage";
 
 export class Check extends Command {

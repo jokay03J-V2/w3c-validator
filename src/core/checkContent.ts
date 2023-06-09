@@ -1,5 +1,5 @@
 import axios from "axios";
-import { responseMessage } from "../utils/types";
+import { type responseMessage } from "../utils/types";
 
 /**
  * Submit html to w3c.

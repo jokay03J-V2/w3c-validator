@@ -1,5 +1,5 @@
 import { Command, Args, Flags, ux } from "@oclif/core";
-import { red, redBright, blue, gray } from "chalk";
+import { red, redBright, gray } from "chalk";
 import { checkUrl } from "../../core/checkUrl";
 import { checkContent } from "../../core/checkContent";
 import { _displayMessage } from "../../utils/displayMessage";
