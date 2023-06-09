@@ -1,5 +1,5 @@
 import { ux } from "@oclif/core";
-import { responseMessage } from "./types";
+import { type responseMessage } from "./types";
 import { red, blue, yellow, magenta, grey } from "chalk";
 
 /**
@@ -7,7 +7,7 @@ import { red, blue, yellow, magenta, grey } from "chalk";
  * @internal
  * @private
  */
-export function _displayMessage(messages: responseMessage[]) {
+export function _displayMessage(messages: responseMessage[]): void {
   for (const message of messages) {
     switch (message.type) {
       case "error":
