@@ -1,6 +1,6 @@
 {
   "name": "@jokay03j-v2/w3c-validator",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "wrapper and CLI for check file or url with W3C Markup Service",
   "author": "jokay03J-V2",
   "bin": {
