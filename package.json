@@ -66,11 +66,11 @@
   },
   "scripts": {
     "build": "shx rm -rf dist && tsc -b",
-    "release": "pnpm run build && oclif manifest",
+    "release": "npm run build && oclif manifest",
     "lint": "eslint . --ext .ts",
     "postpack": "shx rm -f oclif.manifest.json",
-    "posttest": "pnpm run lint",
-    "prepack": "pnpm run build && oclif manifest && oclif readme",
+    "posttest": "npm run lint",
+    "prepack": "npm run build && oclif manifest && oclif readme",
     "test": "mocha --forbid-only \"test/**/*.test.ts\"",
     "version": "oclif readme && git add README.md"
   },
