@@ -21,7 +21,7 @@
     "@oclif/core": "^2",
     "@oclif/plugin-autocomplete": "^2.3.0",
     "@oclif/plugin-help": "^5",
-    "@oclif/plugin-not-found": "^2.3.24",
+    "@oclif/plugin-not-found": "^2.3.37",
     "@oclif/plugin-plugins": "^2.4.7",
     "axios": "^1.4.0",
     "chalk": "^4.1.2",
