@@ -53,4 +53,6 @@ jobs:
 
       - name: Publish
         if: steps.changesets.outputs.hasChangesets == 'false'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: pnpm -r publish
