@@ -16,6 +16,7 @@ jobs:
       - name: Setup Node.js 18.x
         uses: actions/setup-node@v3
         with:
+          token: ${{ secrets.NPM_TOKEN }}
           node-version: 18.x
 
       - uses: pnpm/action-setup@v2
@@ -45,6 +46,9 @@ jobs:
         uses: changesets/action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Authenticate with private NPM package
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
       - name: Build
         if: steps.changesets.outputs.hasChangesets == 'false'
