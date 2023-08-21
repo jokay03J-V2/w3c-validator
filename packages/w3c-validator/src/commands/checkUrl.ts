@@ -26,7 +26,7 @@ export default class CheckUrl extends Command {
 
   public async run(): Promise<void> {
     const { args, flags } = await this.parse(CheckUrl);
-    const messages = await checkUrl(args.file);
+    const messages = await checkUrl(args.url);
 
     displayMessage(messages);
 
@@ -47,5 +47,6 @@ export default class CheckUrl extends Command {
 
   protected async catch(err: CommandError): Promise<any> {
     this.log(red("Error >> " + err.message));
+    this.exit(1);
   }
 }
