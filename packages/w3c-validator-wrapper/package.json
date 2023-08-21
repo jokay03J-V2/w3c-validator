@@ -1,0 +1,49 @@
+{
+  "name": "w3c-validator-wrapper",
+  "version": "0.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": {
+        "import": "./dist/index.d.mts",
+        "default": "./dist/index.d.ts"
+      },
+      "module": "./dist/index.mjs",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "keywords": [
+    "w3c",
+    "validator",
+    "wrapper"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jokay03J-V2/w3c-validator",
+    "directory": "packages/w3c-validator-wrapper"
+  },
+  "author": "jokay03J",
+  "license": "ISC",
+  "devDependencies": {
+    "tsup": "^7.2.0"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "puppeteer": "^20.5.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
