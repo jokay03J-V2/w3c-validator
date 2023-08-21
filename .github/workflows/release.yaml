@@ -16,6 +16,7 @@ jobs:
       - name: Setup Node.js 18.x
         uses: actions/setup-node@v3
         with:
+          token: ${{ secrets.NPM_TOKEN }}
           node-version: 18.x
 
       - uses: pnpm/action-setup@v2
@@ -53,5 +54,3 @@ jobs:
       - name: Publish
         if: steps.changesets.outputs.hasChangesets == 'false'
         run: pnpm -r publish
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
