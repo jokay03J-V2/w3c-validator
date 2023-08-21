@@ -42,7 +42,7 @@
     "test": "pnpm -r --filter='./packages/*' run test",
     "prettier:check": "prettier ./packages/**/*",
     "prettier:format": "prettier ./packages/**/* --write",
-    "release": "pnpm run build && pnpm run publish -r"
+    "release": "pnpm run build && pnpm publish -r"
   },
   "packageManager": "pnpm@8.6.6",
   "engines": {
