@@ -18,10 +18,6 @@ export async function checkFile(
     throw new Error("Is directory not file");
   }
 
-  if (!directory.endsWith(".html")) {
-    throw new Error("Invalid Html file");
-  }
-
   const file = fs.readFileSync(directory);
   const res = await axios.post("https://validator.w3.org/nu/?out=json", file, {
     headers: {
