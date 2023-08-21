@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     branches:
-      - main
+      - dev
 
 jobs:
   release:
@@ -41,21 +41,14 @@ jobs:
       - name: Install dependencies
         run: pnpm recursive install
 
-      - name: Create Release Pull Request
-        id: changesets
-        uses: changesets/action@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Authenticate with private NPM package
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
-      - name: Build
-        if: steps.changesets.outputs.hasChangesets == 'false'
-        run: pnpm run build
-
-      - name: Publish
-        if: steps.changesets.outputs.hasChangesets == 'false'
+      - name: Create Release Pull Request
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: pnpm run release
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: pnpm -r publish
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
