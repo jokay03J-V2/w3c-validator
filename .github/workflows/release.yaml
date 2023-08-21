@@ -54,4 +54,4 @@ jobs:
         if: steps.changesets.outputs.hasChangesets == 'false'
         run: pnpm -r publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
