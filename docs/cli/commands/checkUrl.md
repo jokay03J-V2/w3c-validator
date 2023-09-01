@@ -10,7 +10,7 @@ check html file from a url.
 
 :::note
 
-w3c-validator use [Puppeteer](https://pptr.dev/) to evaluate Javascript and return html file.
+w3c-validator use [Puppeteer](https://pptr.dev/) under the hood to evaluate Javascript and return html file.
 
 :::
 
@@ -23,12 +23,12 @@ w3c-validator checkUrl <url> [-t || --throwError]
 
 ## options
 
-| option       | alias | description                                   | required |
-| ------------ | ----- | --------------------------------------------- | -------- |
-| --throwError | -t    | throw error when w3c validator response error | false    |
+| option       | alias | description                                                | required |
+| ------------ | ----- | ---------------------------------------------------------- | -------- |
+| --throwError | -t    | exit program with code 1 when w3c validator response error | false    |
 
-## exemples
+## examples
 
 ```bash
-w3c-validator checkUrl <directory> -t // or --throwError
+w3c-validator checkUrl https://example.com/ -t // or --throwError
 ```

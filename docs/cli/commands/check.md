@@ -9,7 +9,7 @@ check html file.
 ## usage
 
 ```bash
-w3c-validator check <directory> [-t || --throwError]
+w3c-validator check <pathTofile> [-t || --throwError]
 ```
 
 > [ ] = optionnal<br/>
@@ -17,12 +17,12 @@ w3c-validator check <directory> [-t || --throwError]
 
 ## options
 
-| option       | alias | description                                   | required |
-| ------------ | ----- | --------------------------------------------- | -------- |
-| --throwError | -t    | throw error when w3c validator response error | false    |
+| option       | alias | description                                                | required |
+| ------------ | ----- | ---------------------------------------------------------- | -------- |
+| --throwError | -t    | exit program with code 1 when w3c validator response error | false    |
 
-## exemples
+## examples
 
 ```bash
-w3c-validator check <directory> -t // or --throwError
+w3c-validator check my/path/to/file.html -t // or --throwError
 ```
