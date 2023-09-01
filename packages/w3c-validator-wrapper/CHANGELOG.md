@@ -1,5 +1,11 @@
 # w3c-validator-wrapper
 
+## 2.3.1
+
+### Patch Changes
+
+- abe2e99: Add readme file.
+
 ## 2.3.0
 
 ### Minor Changes
