@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkw_3_c_validator=self.webpackChunkw_3_c_validator||[]).push([[4155],{1233:a=>{a.exports=JSON.parse('{"permalink":"/w3c-validator/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

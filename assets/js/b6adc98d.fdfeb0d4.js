@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkw_3_c_validator=self.webpackChunkw_3_c_validator||[]).push([[6471],{9694:a=>{a.exports=JSON.parse('{"label":"release","permalink":"/w3c-validator/blog/tags/release","allTagsPath":"/w3c-validator/blog/tags","count":1}')}}]);

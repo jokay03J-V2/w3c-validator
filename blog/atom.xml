@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jokay03j-v2.github.io/w3c-validator/blog</id>
     <title>W3C Validator Blog</title>
-    <updated>2023-06-08T13:37:38.000Z</updated>
+    <updated>2023-09-01T16:50:19.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jokay03j-v2.github.io/w3c-validator/blog"/>
     <subtitle>W3C Validator Blog</subtitle>
@@ -11,7 +11,7 @@
         <title type="html"><![CDATA[First release]]></title>
         <id>https://jokay03j-v2.github.io/w3c-validator/blog/first-release</id>
         <link href="https://jokay03j-v2.github.io/w3c-validator/blog/first-release"/>
-        <updated>2023-06-08T13:37:38.000Z</updated>
+        <updated>2023-09-01T16:50:19.000Z</updated>
         <summary type="html"><![CDATA[Changelog]]></summary>
         <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="changelog">Changelog<a href="#changelog" class="hash-link" aria-label="Direct link to Changelog" title="Direct link to Changelog">​</a></h2><ul><li>ignore useless file to npm</li></ul><p>You can find older changelog <a href="https://github.com/jokay03J-V2/w3c-validator/releases" target="_blank" rel="noopener noreferrer">here</a></p>]]></content>
         <author>
@@ -19,6 +19,20 @@
             <uri>https://github.com/jokay03j-v2</uri>
         </author>
         <category label="v1.1.1" term="v1.1.1"/>
+        <category label="release" term="release"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2.x released]]></title>
+        <id>https://jokay03j-v2.github.io/w3c-validator/blog/2-x-released</id>
+        <link href="https://jokay03j-v2.github.io/w3c-validator/blog/2-x-released"/>
+        <updated>2023-09-01T16:50:19.000Z</updated>
+        <summary type="html"><![CDATA[Breaking change from v1.x]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="breaking-change-from-v1x">Breaking change from v1.x<a href="#breaking-change-from-v1x" class="hash-link" aria-label="Direct link to Breaking change from v1.x" title="Direct link to Breaking change from v1.x">​</a></h2><ul><li>actualy cli and api aren't bundled as the same package. The cli is under <code>@jokay03j-v2/w3c-validator</code> package and the apis are on <code>w3c-validator-wrapper</code> package.</li><li>[API]<!-- --> change name <code>checkDirectory</code> to <code>checkFile</code>.</li><li>[API]<!-- --> <code>checkUrl</code> now return W3C response and not html content of url.</li></ul>]]></content>
+        <author>
+            <name>Jokay03J</name>
+            <uri>https://github.com/jokay03j-v2</uri>
+        </author>
+        <category label="v2.2.2" term="v2.2.2"/>
         <category label="release" term="release"/>
     </entry>
 </feed>
