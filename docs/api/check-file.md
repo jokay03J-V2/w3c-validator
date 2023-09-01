@@ -1,10 +1,10 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 ---
 
-# checkUrl
+# checkFile
 
-return W3C Validation Markup Service response from a url.
+return W3C Validation Markup Service response from file.
 
 ```ts
 interface responseMessage {
@@ -19,5 +19,5 @@ interface responseMessage {
     hiliteLenght?: number;
 }
 
-checkUrl(url: string, contentType?: string): Promise<responseMessage[]>
+checkFile(pathToFile: string, contentType?: string): Promise<responseMessage[]>
 ```
