@@ -76,10 +76,6 @@ const config = {
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
-            type: "docsVersionDropdown",
-            position: "right",
-          },
-          {
             href: "https://github.com/jokay03J-V2/w3c-validator",
             label: "GitHub",
             position: "right",
