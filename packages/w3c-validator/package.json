@@ -1,43 +1,48 @@
 {
-  "name": "@jokay03j-v2/w3c-validator",
-  "version": "2.2.2",
-  "description": "CLI for check file or url with W3C Markup Service",
   "author": "jokay03J @Jokay03J",
   "bin": {
-    "w3c-validator": "./bin/run"
+    "w3c-validator": "./bin/run.js"
   },
-  "homepage": "https://github.com/jokay03J-V2/w3c-validator",
-  "license": "MIT",
-  "repository": "jokay03J-V2/w3c-validator",
+  "dependencies": {
+    "@jokay03j-v2/w3c-validator": "^2.2.2",
+    "@oclif/core": "^3",
+    "@oclif/plugin-help": "^5",
+    "@oclif/plugin-plugins": "^3.7.0",
+    "chalk": "^4.0.0",
+    "puppeteer": "^20.5.0",
+    "w3c-validator-wrapper": "workspace:*"
+  },
+  "description": "CLI for check file or url with W3C Markup Service",
+  "devDependencies": {
+    "@oclif/prettier-config": "^0.2.1",
+    "@oclif/test": "^3",
+    "@types/chai": "^4",
+    "@types/mocha": "^10",
+    "@types/node": "^18",
+    "chai": "^4",
+    "eslint": "^8",
+    "eslint-config-oclif": "^5",
+    "eslint-config-oclif-typescript": "^3",
+    "eslint-config-prettier": "^9.0.0",
+    "mocha": "^10",
+    "oclif": "^4.0.3",
+    "shx": "^0.3.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "files": [
     "/bin",
     "/dist",
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "dependencies": {
-    "@oclif/core": "^2.11.8",
-    "@oclif/plugin-help": "^5.2.17",
-    "@oclif/plugin-plugins": "^3.2.6",
-    "chalk": "^4.0.0",
-    "w3c-validator-wrapper": "workspace:^"
-  },
-  "devDependencies": {
-    "@oclif/test": "^2.4.5",
-    "@types/chai": "^4",
-    "@types/mocha": "^9.0.0",
-    "@types/node": "^16.18.41",
-    "chai": "^4",
-    "eslint": "^7.32.0",
-    "eslint-config-oclif": "^4",
-    "eslint-config-oclif-typescript": "^1.0.3",
-    "mocha": "^9",
-    "oclif": "^3.11.3",
-    "shx": "^0.3.3",
-    "ts-node": "^10.9.1",
-    "tslib": "^2.6.2",
-    "typescript": "^4.9.5"
-  },
+  "homepage": "https://github.com/jokay03J-V2/w3c-validator",
+  "license": "MIT",
+  "main": "",
+  "name": "@jokay03j-v2/w3c-validator",
   "oclif": {
     "bin": "w3c-validator",
     "dirname": "w3c-validator",
@@ -48,14 +53,16 @@
     ],
     "topicSeparator": " "
   },
+  "repository": "jokay03J-V2/w3c-validator",
   "scripts": {
-    "build": "shx rm -rf dist && tsc -b",
-    "dev": "echo \"For run cli on dev mode run dev file with node e.g : node bin/dev [command]\"",
-    "test": "mocha --forbid-only \"test/**/*.test.ts\""
+    "pack": "shx rm -rf dist && tsc -b",
+    "lint": "eslint . --ext .ts",
+    "posttest": "npm run lint",
+    "build": "npm run pack && oclif manifest",
+    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "dev": "echo \"For dev mode run ./bin/dev.js [COMMAND]\""
   },
-  "engines": {
-    "node": ">=12.0.0"
-  },
+  "version": "2.2.2",
   "bugs": "https://github.com/jokay03J-V2/w3c-validator/issues",
   "keywords": [
     "w3c",
@@ -64,5 +71,8 @@
   ],
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "types": "dist/index.d.ts",
+  "exports": "./lib/index.js",
+  "type": "module"
 }
