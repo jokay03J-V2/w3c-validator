@@ -44,14 +44,15 @@
     "prettier:format": "prettier ./packages/**/* --write",
     "release": "pnpm run build && pnpm dlx @changesets/cli publish"
   },
-  "packageManager": "pnpm@8.6.6",
+  "packageManager": "pnpm@8.9.0",
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">=18.0.0 || >=20.0.0"
   },
   "bugs": "https://github.com/jokay03J-V2/w3c-validator/issues",
   "keywords": [
     "cli",
     "w3c",
     "validator"
-  ]
+  ],
+  "files": ["*"]
 }
