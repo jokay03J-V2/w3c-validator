@@ -1,37 +1,28 @@
 import {expect, test} from '@oclif/test'
-import {join} from 'path'
-import {writeFile} from 'node:fs'
+import {dirname, join, relative} from 'path'
 
 const root = join(import.meta.url, '../../../')
-const htmlContent = `
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body></body>
-</html>`
-writeFile('./tmp/test.html', htmlContent, () => console.log('Created test html file'))
+const actual = join(import.meta.url, '../test.html').replace('file:', '')
 
 describe('check file', () => {
   test
     .loadConfig({root})
     .stdout()
-    .command(['check', './tmp/test.html'])
+    .command(['check', actual])
     .it('runs check file', (ctx) => {
       expect(ctx.stdout).to.contain('error')
       expect(ctx.stdout).to.contain('info')
       expect(ctx.stdout).to.contain('warning')
     })
+})
 
+describe('check file exit code', () => {
   test
     .loadConfig({root})
     .stdout()
-    .command(['check', './tmp/test.html', '-t'])
+    .command(['check', actual, '-t'])
     .exit(1)
-    .it('should be exit 1 if t flags is provided', (ctx) => {
+    .it('should be exit 1 if t flags is provided ', (ctx) => {
       expect(ctx.stdout).to.contain('error')
       expect(ctx.stdout).to.contain('info')
       expect(ctx.stdout).to.contain('warning')
