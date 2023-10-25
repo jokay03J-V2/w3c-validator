@@ -4,7 +4,6 @@
     "w3c-validator": "./bin/run.js"
   },
   "dependencies": {
-    "@jokay03j-v2/w3c-validator": "^2.2.3",
     "@oclif/core": "^3",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^3.7.0",
