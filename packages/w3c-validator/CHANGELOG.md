@@ -1,5 +1,16 @@
 # @jokay03j-v2/w3c-validator
 
+## 2.2.3
+
+### Patch Changes
+
+- 4556d84: - Update cli to oclif version 4
+  - Create test for the cli
+- Updated dependencies [4556d84]
+- Updated dependencies [4556d84]
+  - @jokay03j-v2/w3c-validator@2.2.3
+  - w3c-validator-wrapper@2.3.2
+
 ## 2.2.2
 
 ### Patch Changes
