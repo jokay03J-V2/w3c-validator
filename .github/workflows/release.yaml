@@ -44,6 +44,9 @@ jobs:
       - name: Authenticate with private NPM package
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
+      - name: Build
+        run: pnpm run build
+
       - name: Run tests
         run: pnpm run test
 
