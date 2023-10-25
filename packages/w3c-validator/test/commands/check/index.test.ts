@@ -1,5 +1,5 @@
 import {expect, test} from '@oclif/test'
-import {dirname, join, relative} from 'path'
+import {join} from 'path'
 
 const root = join(import.meta.url, '../../../')
 const actual = join(import.meta.url, '../test.html').replace('file:', '')
