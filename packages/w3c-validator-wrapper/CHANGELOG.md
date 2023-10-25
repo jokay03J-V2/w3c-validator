@@ -1,5 +1,11 @@
 # w3c-validator-wrapper
 
+## 2.3.2
+
+### Patch Changes
+
+- 4556d84: Create units tests
+
 ## 2.3.1
 
 ### Patch Changes
