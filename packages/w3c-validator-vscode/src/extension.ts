@@ -1,15 +1,11 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from "vscode";
 import checkFileCommand from "./commands/checkFile";
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
-export function activate(context: vscode.ExtensionContext) {
-  let disposable = vscode.commands.registerCommand(
-    "w3c-validator.checkfile",
-    checkFileCommand
-  );
+import chechUrlCommand from "./commands/checkUrl";
+import { showReport } from "./utils/showReport";
+import { LoggingService } from "./loginService";
 
+export function activate(context: vscode.ExtensionContext) {
+  // create status bar item
   const statusBar = vscode.window.createStatusBarItem(
     vscode.StatusBarAlignment.Right
   );
@@ -17,14 +13,42 @@ export function activate(context: vscode.ExtensionContext) {
   statusBar.text = "$(check) W3C Ready to check";
   statusBar.show();
 
-  context.subscriptions.push(disposable);
-  context.subscriptions.push(statusBar);
+  // register checkUrl command
   context.subscriptions.push(
-    vscode.workspace.onDidSaveTextDocument(() => {
+    vscode.commands.registerCommand("w3c-validator.checkurl", chechUrlCommand)
+  );
+  // register check file
+  context.subscriptions.push(
+    vscode.commands.registerCommand("w3c-validator.checkfile", checkFileCommand)
+  );
+  //register status bar
+  context.subscriptions.push(statusBar);
+
+  // register on save event check current opened file
+  context.subscriptions.push(
+    vscode.workspace.onDidSaveTextDocument((doc) => {
       const config = vscode.workspace.getConfiguration("w3c-validator");
       const toBeCheck: boolean | undefined = config.get("checkFileOnSave");
-      if (toBeCheck) {
-        checkFileCommand();
+      const fileToBeChecked: string | undefined = config.get(
+        "fileTypeTobeChecked"
+      );
+      try {
+        if (!fileToBeChecked) {
+          throw new Error("Invalid regexp pattern");
+        }
+        const regex = new RegExp(fileToBeChecked, "g");
+        // check
+        if (toBeCheck && regex.test(doc.fileName)) {
+          showReport(doc);
+        }
+      } catch (err) {
+        if (err instanceof Error) {
+          LoggingService.error(err);
+
+          if (err.name === "SyntaxError") {
+            vscode.window.showErrorMessage("Invalid Regexp pattern");
+          }
+        }
       }
     })
   );
