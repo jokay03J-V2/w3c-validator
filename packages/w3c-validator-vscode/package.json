@@ -8,6 +8,8 @@
   "engines": {
     "vscode": "^1.83.0"
   },
+  "repository": "jokay03J-V2/w3c-validator",
+  "bugs": "https://github.com/jokay03J-V2/w3c-validator/issues",
   "categories": [
     "Other"
   ],
@@ -65,5 +67,6 @@
   "dependencies": {
     "@vscode/webview-ui-toolkit": "^1.2.2",
     "w3c-validator-wrapper": "workspace:^"
-  }
+  },
+  "packageManager": "pnpm@8.7.0"
 }
