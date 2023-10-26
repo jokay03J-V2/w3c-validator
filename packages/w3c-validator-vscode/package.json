@@ -1,7 +1,9 @@
 {
   "name": "w3c-validator-vscode",
   "displayName": "w3c-validator",
-  "description": "",
+  "private": true,
+  "publisher": "jokay03J",
+  "description": "Visual Studio Code extension for check file or url with W3C Markup Service",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.83.0"
@@ -18,6 +20,10 @@
       {
         "command": "w3c-validator.checkfile",
         "title": "w3c-validator: Check file"
+      },
+      {
+        "command": "w3c-validator.checkurl",
+        "title": "w3c-validator: Check url"
       }
     ],
     "configuration": {
@@ -26,7 +32,12 @@
         "w3c-validator.checkFileOnSave": {
           "type": "boolean",
           "default": true,
-          "description": "Check file on save."
+          "description": "Enable/Disable Checking of the current opened file on save."
+        },
+        "w3c-validator.fileTypeTobeChecked": {
+          "type": "string",
+          "default": "^.{1,}.html$",
+          "description": "File type to be checked on save. Should be a valid regex."
         }
       }
     }
@@ -40,18 +51,19 @@
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.83.0",
     "@types/mocha": "^10.0.2",
     "@types/node": "18.x",
+    "@types/vscode": "^1.83.0",
     "@typescript-eslint/eslint-plugin": "^6.7.3",
     "@typescript-eslint/parser": "^6.7.3",
+    "@vscode/test-electron": "^2.3.4",
     "eslint": "^8.50.0",
     "glob": "^10.3.3",
     "mocha": "^10.2.0",
-    "typescript": "^5.2.2",
-    "@vscode/test-electron": "^2.3.4"
+    "typescript": "^5.2.2"
   },
   "dependencies": {
+    "@vscode/webview-ui-toolkit": "^1.2.2",
     "w3c-validator-wrapper": "workspace:^"
   }
 }
