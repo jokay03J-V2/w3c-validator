@@ -27,4 +27,28 @@ If you find bugs, you can open issue [here](https://github.com/jokay03J-V2/w3c-v
 
 See CHANGELOG.md file.
 
+## How to contribute ?
+
+### Run dev build
+
+Run `pnpm run watch`.
+
+Press F5 for open vscode on mode Extension Host.
+
+### Run production production build
+
+Run `pnpm run build`.
+
+If you want production, press F5.
+
+### Package into .vsix
+
+You must [have already built](#run-production-production-build) the project before package it.
+
+Run `pnpm run package`.
+
+#### Release pre-release
+
+Run `pnpm run package:pre-release`.
+
 **Enjoy!**
