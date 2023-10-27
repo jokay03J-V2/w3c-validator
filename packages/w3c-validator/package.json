@@ -6,7 +6,7 @@
   "dependencies": {
     "@oclif/core": "^3",
     "@oclif/plugin-help": "^6.0.0",
-    "@oclif/plugin-plugins": "^3.7.0",
+    "@oclif/plugin-plugins": "^4.0.0",
     "chalk": "^4.0.0",
     "puppeteer": "^20.5.0",
     "w3c-validator-wrapper": "workspace:*"
