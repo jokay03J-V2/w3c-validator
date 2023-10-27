@@ -1,5 +1,13 @@
 # @jokay03j-v2/w3c-validator
 
+## 2.2.4
+
+### Patch Changes
+
+- Updated dependencies [3b1dfdb]
+- Updated dependencies [3b1dfdb]
+  - w3c-validator-wrapper@2.3.3
+
 ## 2.2.3
 
 ### Patch Changes
