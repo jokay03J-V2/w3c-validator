@@ -1,6 +1,6 @@
 import axios from "axios";
 import puppeteer from "puppeteer";
-import { responseMessage } from "./utils/types";
+import { type responseMessage } from "./utils/types";
 
 /**
  * submit page content to w3c and return response
