@@ -2,7 +2,7 @@
 "w3c-validator-vscode": major
 ---
 
-\# First version !
+# First version !
 
 - add checkUrl command
 - add checkFile command
