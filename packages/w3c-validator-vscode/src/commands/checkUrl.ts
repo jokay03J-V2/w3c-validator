@@ -14,6 +14,8 @@ export default async function run() {
       } catch (err) {
         return "Url is not valid eg: https://exemple.com";
       }
+
+      return null;
     },
   });
 
