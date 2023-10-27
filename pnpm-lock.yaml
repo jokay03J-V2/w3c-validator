@@ -87,8 +87,8 @@ importers:
         specifier: ^3
         version: 3.5.0
       '@oclif/plugin-help':
-        specifier: ^5
-        version: 5.2.17(@types/node@18.18.6)(typescript@5.2.2)
+        specifier: ^6.0.0
+        version: 6.0.4
       '@oclif/plugin-plugins':
         specifier: ^3.7.0
         version: 3.9.3(@types/node@18.18.6)(typescript@5.2.2)
@@ -1543,6 +1543,14 @@ packages:
       - '@swc/wasm'
       - '@types/node'
       - typescript
+    dev: true
+
+  /@oclif/plugin-help@6.0.4:
+    resolution: {integrity: sha512-IxiH1petVjLKdITMPbGWKGQtrIn+FSaUt2NKMs6RW5qjVhlkHXLNiN0MJ7/uvn6X/DmG+CDCHxigFgr1eDSmRQ==}
+    engines: {node: '>=18.0.0'}
+    dependencies:
+      '@oclif/core': 3.5.0
+    dev: false
 
   /@oclif/plugin-not-found@2.3.24(@types/node@16.18.34)(typescript@4.9.5):
     resolution: {integrity: sha512-N3fOr7OlpwGSNjo4Tf0LFLClHfj/zrcQSn23Paw0apovmwI46QMiOvk2JWOpf1xvGZL5e7izejWd7tK1fUxGEQ==}
