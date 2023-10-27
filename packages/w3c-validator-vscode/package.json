@@ -46,12 +46,11 @@
     }
   },
   "scripts": {
-    "vscode:prepublish": "pnpm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "pretest": "pnpm run compile && pnpm run lint",
-    "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
+    "vscode:prepublish": "pnpm run esbuild-base",
+    "esbuild-base": "node ./esbuild.config.js",
+    "build": "pnpm run esbuild-base",
+    "watch": "pnpm run esbuild-base",
+    "package:pre-release": "vsce package --no-dependencies -o \"./dist/vscode_extension.vsix\""
   },
   "devDependencies": {
     "@types/mocha": "^10.0.2",
@@ -60,13 +59,13 @@
     "@typescript-eslint/eslint-plugin": "^6.7.3",
     "@typescript-eslint/parser": "^6.7.3",
     "@vscode/test-electron": "^2.3.4",
+    "@vscode/vsce": "^2.21.1",
+    "esbuild": "^0.19.5",
     "eslint": "^8.50.0",
     "glob": "^10.3.3",
     "mocha": "^10.2.0",
-    "typescript": "^5.2.2"
-  },
-  "dependencies": {
-    "@vscode/webview-ui-toolkit": "^1.2.2",
+    "ts-loader": "^9.5.0",
+    "typescript": "^5.2.2",
     "w3c-validator-wrapper": "workspace:^"
   },
   "packageManager": "pnpm@8.7.0"
