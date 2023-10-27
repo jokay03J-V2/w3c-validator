@@ -12,8 +12,8 @@ importers:
         specifier: ^2.26.2
         version: 2.26.2
       '@oclif/test':
-        specifier: ^2.3.22
-        version: 2.3.22(@types/node@16.18.34)(typescript@4.9.5)
+        specifier: ^3.0.0
+        version: 3.0.2
       '@types/chai':
         specifier: ^4
         version: 4.0.0
@@ -1369,47 +1369,6 @@ packages:
       wrap-ansi: 7.0.0
     dev: true
 
-  /@oclif/core@2.11.8(@types/node@16.18.34)(typescript@4.9.5):
-    resolution: {integrity: sha512-GILmztcHBzze45GvxRpUvqQI5nM26kSE/Q21Y+6DtMR+C8etM/hFW26D3uqIAbGlGtg5QEZZ6pjA/Fqgz+gl3A==}
-    engines: {node: '>=14.0.0'}
-    dependencies:
-      '@types/cli-progress': 3.11.0
-      ansi-escapes: 4.3.2
-      ansi-styles: 4.3.0
-      cardinal: 2.1.1
-      chalk: 4.1.2
-      clean-stack: 3.0.1
-      cli-progress: 3.12.0
-      debug: 4.3.4(supports-color@8.1.1)
-      ejs: 3.1.9
-      fs-extra: 9.1.0
-      get-package-type: 0.1.0
-      globby: 11.1.0
-      hyperlinker: 1.0.0
-      indent-string: 4.0.0
-      is-wsl: 2.2.0
-      js-yaml: 3.14.1
-      natural-orderby: 2.0.3
-      object-treeify: 1.1.33
-      password-prompt: 1.1.3
-      semver: 7.5.4
-      slice-ansi: 4.0.0
-      string-width: 4.2.3
-      strip-ansi: 6.0.1
-      supports-color: 8.1.1
-      supports-hyperlinks: 2.3.0
-      ts-node: 10.9.1(@types/node@16.18.34)(typescript@4.9.5)
-      tslib: 2.6.2
-      widest-line: 3.1.0
-      wordwrap: 1.0.0
-      wrap-ansi: 7.0.0
-    transitivePeerDependencies:
-      - '@swc/core'
-      - '@swc/wasm'
-      - '@types/node'
-      - typescript
-    dev: true
-
   /@oclif/core@2.15.0(@types/node@16.18.34)(typescript@4.9.5):
     resolution: {integrity: sha512-fNEMG5DzJHhYmI3MgpByTvltBOMyFcnRIUMxbiz2ai8rhaYgaTHMG3Q38HcosfIvtw9nCjxpcQtC8MN8QtVCcA==}
     engines: {node: '>=14.0.0'}
@@ -1643,20 +1602,6 @@ packages:
   /@oclif/screen@3.0.6:
     resolution: {integrity: sha512-nEv7dFPxCrWrvK6dQ8zya0/Kb54EXVcwIKV9capjSa89ZDoOo+qH0YSo4/eQVECXgW3eUvgKLDIcIt62YBk0HA==}
     engines: {node: '>=12.0.0'}
-    dev: true
-
-  /@oclif/test@2.3.22(@types/node@16.18.34)(typescript@4.9.5):
-    resolution: {integrity: sha512-0wLW8YnLS9Gvipgu64ZtzPmi7HfyJkPziU/tfW8T/4lQyalDvL8MS05+1UPR6V6hXu86Ehg0CbWJDeU4TB+e1Q==}
-    engines: {node: '>=12.0.0'}
-    dependencies:
-      '@oclif/core': 2.11.8(@types/node@16.18.34)(typescript@4.9.5)
-      fancy-test: 2.0.35
-    transitivePeerDependencies:
-      - '@swc/core'
-      - '@swc/wasm'
-      - '@types/node'
-      - supports-color
-      - typescript
     dev: true
 
   /@oclif/test@3.0.2:
@@ -5039,22 +4984,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: false
-
-  /fancy-test@2.0.35:
-    resolution: {integrity: sha512-XE0L7yAFOKY2jDnkBDDQ3JBD7xbBFwAFl1Z/5WNKBeVNlaEP08wuRTPE3xj2k+fnUp2CMUfD+6aiIS+4pcrjwg==}
-    engines: {node: '>=12.0.0'}
-    dependencies:
-      '@types/chai': 4.0.0
-      '@types/lodash': 4.14.197
-      '@types/node': 18.18.6
-      '@types/sinon': 10.0.16
-      lodash: 4.17.21
-      mock-stdin: 1.0.0
-      nock: 13.3.3
-      stdout-stderr: 0.1.13
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
 
   /fancy-test@3.0.1:
     resolution: {integrity: sha512-Ke1IFOGEBxP2dNg0X7ZYPUSwKSRr5GNn3xM/2DpHkP86riF3MFDpesXJuD1TGm7gcfwBtYpuSzuw3m704bThVg==}

@@ -10,7 +10,7 @@
   "repository": "jokay03J-V2/w3c-validator",
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
-    "@oclif/test": "^2.3.22",
+    "@oclif/test": "^3.0.0",
     "@types/chai": "^4",
     "@types/mocha": "^10.0.0",
     "@types/node": "^16.18.34",
