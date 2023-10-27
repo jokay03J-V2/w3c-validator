@@ -1,5 +1,12 @@
 # w3c-validator-wrapper
 
+## 2.3.3
+
+### Patch Changes
+
+- 3b1dfdb: Update puppeteer 20.5.0 to 21.4.0
+- 3b1dfdb: Add "require" and "main" exports fields
+
 ## 2.3.2
 
 ### Patch Changes
