@@ -46,11 +46,12 @@
     }
   },
   "scripts": {
-    "vscode:prepublish": "pnpm run esbuild-base",
+    "vscode:prepublish": "mkdir -p dist && pnpm run esbuild-base",
     "esbuild-base": "node ./esbuild.config.js",
     "build": "pnpm run esbuild-base",
     "watch": "pnpm run esbuild-base",
-    "package:pre-release": "vsce package --no-dependencies -o \"./dist/vscode_extension.vsix\""
+    "package:pre-release": "vsce package --pre-release --no-dependencies -o \"./dist/vscode_extension.vsix\"",
+    "package": "vsce package --pre-release --no-dependencies -o \"./dist/vscode_extension.vsix\""
   },
   "devDependencies": {
     "@types/mocha": "^10.0.2",
