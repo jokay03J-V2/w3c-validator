@@ -1,14 +1,16 @@
 name: Sync Renovate changeset
 on:
   pull_request_target:
+    types: [labeled, opened, reopened, edited]
     paths:
       - ".github/workflows/sync_renovate-changesets.yml"
       - "**/pnpm-lock.yaml"
+      - "pnpm-lock.yaml"
 
 jobs:
   generate-changeset:
     runs-on: ubuntu-latest
-    if: github.actor == 'renovate[bot]'
+    if: github.actor == 'renovate[bot]' && github.event.label.name == 'dependencies'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
