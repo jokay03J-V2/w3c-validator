@@ -6,7 +6,7 @@ on:
 jobs:
   generate-changeset:
     runs-on: ubuntu-latest
-    if: github.event.label.name == 'dependencies'
+    if: github.event.label.name == 'needToBeChangelog'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -94,4 +94,4 @@ jobs:
             await exec.exec("git push --force");
       - uses: actions-ecosystem/action-remove-labels@v1.3.0
         with:
-          labels: dependencies
+          labels: needToBeChangelog
