@@ -13,30 +13,35 @@ import chalk from 'chalk'
 export function displayMessage(messages: responseMessage[]): void {
   for (const message of messages) {
     switch (message.type) {
-      case 'error':
+      case 'error': {
         ux.log(chalk.red(message.type), chalk.bgGray(`line: ${message.lastLine ?? 'unknow'}`), message.message)
         ux.log(chalk.bgBlack.underline(message.extract ?? 'unknow'))
         break
+      }
 
-      case 'info':
+      case 'info': {
         ux.log(chalk.blue(message.type), chalk.bgGray(`line: ${message.lastLine ?? 'unknow'}`), message.message)
         ux.log(chalk.bgBlack.underline(message.extract ?? 'unknow'))
         break
+      }
 
-      case 'warning':
+      case 'warning': {
         ux.log(chalk.yellow(message.type), chalk.bgGray(`line: ${message.lastLine ?? 'unknow'}`), message.message)
         ux.log(chalk.bgBlack.underline(message.extract ?? 'unknow'))
         break
+      }
 
-      case 'fatal':
+      case 'fatal': {
         ux.log(chalk.magenta(message.type), chalk.bgGray(`line: ${message.lastLine ?? 'unknow'}`), message.message)
         ux.log(chalk.bgBlack.underline(message.extract ?? 'unknow'))
         break
+      }
 
-      default:
+      default: {
         ux.log(chalk.grey(message.type), chalk.bgGray(`line: ${message.lastLine ?? 'unknow'}`), message.message)
         ux.log(chalk.bgBlack.underline(message.extract ?? 'unknow'))
         break
+      }
     }
   }
 }

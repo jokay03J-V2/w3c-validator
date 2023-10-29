@@ -51,7 +51,8 @@
     "build": "pnpm run esbuild-base",
     "watch": "pnpm run esbuild-base",
     "package:pre-release": "vsce package --pre-release --no-dependencies -o \"./dist/vscode_extension.vsix\"",
-    "package": "vsce package --pre-release --no-dependencies -o \"./dist/vscode_extension.vsix\""
+    "package": "vsce package --pre-release --no-dependencies -o \"./dist/vscode_extension.vsix\"",
+    "lint": "eslint . --ext .ts"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.2",

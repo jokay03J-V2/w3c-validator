@@ -7,7 +7,8 @@
   "scripts": {
     "build": "tsup",
     "test": "mocha --forbid-only \"test/**/*.test.ts\"",
-    "dev": "tsup --watch"
+    "dev": "tsup --watch",
+    "lint": "eslint . --ext .ts"
   },
   "files": [
     "dist",
