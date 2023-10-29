@@ -1,5 +1,5 @@
 import {expect, test} from '@oclif/test'
-import {join} from 'path'
+import {join} from 'node:path'
 
 const root = join(import.meta.url, '../../../')
 
