@@ -92,6 +92,6 @@ jobs:
             await exec.exec("git", ["add", fileName]);
             await exec.exec("git commit -C HEAD --amend --no-edit");
             await exec.exec("git push --force");
-      - uses: actions-ecosystem/action-remove-labels@v1.3
+      - uses: actions-ecosystem/action-remove-labels@v1.3.0
         with:
           labels: dependencies
