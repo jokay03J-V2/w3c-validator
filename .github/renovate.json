@@ -1,5 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "labels": ["dependencies"],
+  "labels": ["dependencies", "needToBeChangelog"],
   "baseBranches": ["dev"]
 }
