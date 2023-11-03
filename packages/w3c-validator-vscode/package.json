@@ -4,7 +4,7 @@
   "private": true,
   "publisher": "jokay03J",
   "description": "Visual Studio Code extension for check file or url with W3C Markup Service",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "engines": {
     "vscode": "^1.63.0"
   },
