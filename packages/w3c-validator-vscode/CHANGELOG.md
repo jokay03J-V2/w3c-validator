@@ -1,5 +1,15 @@
 # w3c-validator-vscode
 
+## 2.0.0
+
+### Major Changes
+
+- 4830c6b: Set minimum vscode engine to 1.63.x
+
+### Minor Changes
+
+- da9aa19: Update notification buttons
+
 ## 1.0.0
 
 ### Major Changes

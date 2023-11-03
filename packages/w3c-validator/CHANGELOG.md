@@ -1,5 +1,15 @@
 # @jokay03j-v2/w3c-validator
 
+## 2.2.5
+
+### Patch Changes
+
+- c0695a2: Updated dependency `@oclif/plugin-plugins` to `^4.0.0`.
+- 39c4eae: Updated dependency `chalk` to `^5.0.0`.
+- f5858a2: Updated dependency `@oclif/plugin-help` to `^6.0.0`.
+- 202258c: Update dependency `puppeteer` to `v21`
+- 8118fa0: Updated dependency `@types/node` to `^20.0.0`.
+
 ## 2.2.4
 
 ### Patch Changes

@@ -61,7 +61,7 @@
     "test": "mocha --forbid-only \"test/**/*.test.ts\"",
     "dev": "echo \"For dev mode run ./bin/dev.js [COMMAND]\""
   },
-  "version": "2.2.4",
+  "version": "2.2.5",
   "bugs": "https://github.com/jokay03J-V2/w3c-validator/issues",
   "keywords": [
     "w3c",
