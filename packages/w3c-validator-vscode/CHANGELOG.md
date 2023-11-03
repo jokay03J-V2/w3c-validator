@@ -1,5 +1,11 @@
 # w3c-validator-vscode
 
+## 2.0.1
+
+### Patch Changes
+
+- a41680c: Fix notification button message
+
 ## 2.0.0
 
 ### Major Changes
