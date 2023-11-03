@@ -35,12 +35,6 @@ Run `pnpm run watch`.
 
 Press F5 for open vscode on mode Extension Host.
 
-### Run production production build
-
-Run `pnpm run build`.
-
-If you want production, press F5.
-
 ### Package into .vsix
 
 You must [have already built](#run-production-production-build) the project before package it.
