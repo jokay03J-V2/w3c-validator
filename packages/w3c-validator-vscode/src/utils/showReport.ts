@@ -4,7 +4,7 @@ import * as vscode from "vscode";
 
 enum ActionState {
   global = "Disable",
-  report = "Detailled report"
+  report = "Detailed report"
 }
 
 export async function showReport(doc: vscode.TextDocument) {
