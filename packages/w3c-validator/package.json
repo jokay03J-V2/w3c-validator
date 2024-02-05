@@ -8,7 +8,7 @@
     "@oclif/plugin-help": "^6.0.0",
     "@oclif/plugin-plugins": "^4.0.0",
     "chalk": "^5.0.0",
-    "puppeteer": "^21.0.0",
+    "puppeteer": "^22.0.0",
     "w3c-validator-wrapper": "workspace:*"
   },
   "description": "CLI for check file or url with W3C Markup Service",
